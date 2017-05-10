@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 while true
 do
 	
@@ -10,7 +12,7 @@ do
 		echo -n "."
 	else
 		echo "$(date +%F-%T) : Connection DOWN, reseting wifi..."
-		wifi-reset.sh
+		$DIR/wifi-reset.sh
 	fi
 	sleep 10
 done
